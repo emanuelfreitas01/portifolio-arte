@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 800px;
+    background: linear-gradient(180deg, rgb(20, 48, 46) 10%, rgb(35, 103, 122) 50%, rgb(42, 120, 126) 100%);
+}
+
+.header {
+    flex-grow: 1;
+    height: 100%;
+    width: 300px;
+    background-color: rgb(22, 44, 106);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid gray;
+}
+
+.buttons button {
+    width: 300px;
+    min-height: 40px;
+    background-color: rgba(7, 7, 204, 0);
+    border: 0;
+    color: aliceblue;
+    transition: background-color 0.5s ease;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+    background: rgb(20, 20, 192);
+}
+
+.artes {
+    opacity: 0;
+    visibility: hidden;
+    transform: translatex(-20px);
+    transition: all 0.3s;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 150px;
+    background-color: rgb(22, 44, 106);
+}
+
+.artes button {
+    display: block;
+    width: 300px;
+    min-height: 40px;
+    background-color: rgba(7, 7, 204, 0);
+    border: 0;
+    color: aliceblue;
+    transition: background-color 0.5s ease;
+}
+
+.projetos-botoes:hover .artes {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.projetos-botoes {
+    position: relative;
+    display: inline-block;
+}
